@@ -14,5 +14,7 @@ namespace App.Models
         public string name { get; set; }
         public string gender { get; set; }
         public string city { get; set; }
+        public int DepartmentID { get; set; } 
+
      }
 }

@@ -9,6 +9,13 @@ namespace App.Controllers
 {
     public class EmployeeController : Controller
     {
+        public ActionResult Index(int departmentId)
+        {
+            EmployeeContext employeeContext = new EmployeeContext();
+            List <Employee> employees = employeeContext.Employees.Where(emp=> emp.DepartmentID== departmentId).ToList(); 
+            return View(employees);
+        }
+
         public ActionResult Details(int id)
         {
             EmployeeContext employeeContext = new EmployeeContext();
