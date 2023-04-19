@@ -12,9 +12,9 @@ namespace App.Controllers
         public ActionResult Index()
         {
             EmployeeContext employeeContext = new EmployeeContext();
-            List<Department> department = employeeContext.Departments.ToList();
+            List<Department> departments = employeeContext.Departments.ToList();
 
-            return View(department);
+            return View(departments);
         }
     }
 }

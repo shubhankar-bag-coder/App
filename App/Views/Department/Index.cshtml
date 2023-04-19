@@ -8,15 +8,14 @@
 <h2>Department List</h2>
 
 <div>
-    <ul>
-        @foreach (Department department in @Model)
-        {
-            <li>
-                @Html.ActionLink(department.Name, "Index", "Employee", new { departmentI= department.department.ID}, null)
-            </li>
+<ul>
+   @foreach( Department department in @Model)
+     {
+     <li>
+                @Html.ActionLink(department.Name, "Index", "Employee", new { departmentId = department.id }, null )
+     </li>
 
-        }
-    </ul>
-
+     }
+</ul>
 </div>
 

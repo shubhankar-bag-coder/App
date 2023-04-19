@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 // This namespace will work when Application starts.
 
@@ -14,6 +14,4 @@ namespace App.Models
         public DbSet<Department> Departments { get; set; }
 
     }
-
-}
 }
