@@ -9,23 +9,36 @@ namespace App.Controllers
 {
     public class HomeController : Controller
     {
-        public ViewResult Index()
+        public ActionResult Index()
         {
-            ViewBag.Countries =new List<string>()
-            {
-                "India",
-                "UK",
-                "USA",
-                "Japan"
-            };
-           return View();
-         
- }
-        /* public string Index(string id)
-        {
-            return "Id: "+id + "\n Name:" +Request.QueryString["name"];
+            ViewBag.Countries = new List<string>()
+             {
+                 "India",
+                 "UK",
+                 "USA",
+                 "Japan"
+             };
+            return View();
         }
-        */
+
+
+        /* public ViewResult Index()
+         {
+             ViewBag.Countries =new List<string>()
+             {
+                 "India",
+                 "UK",
+                 "USA",
+                 "Japan"
+             };
+            return View();
+
+  }
+          public string Index(string id)
+         {
+             return "Id: "+id + "\n Name:" +Request.QueryString["name"];
+         }
+         */
 
         public ActionResult About()
         {

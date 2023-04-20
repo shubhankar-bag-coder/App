@@ -12,9 +12,8 @@
    @foreach( Department department in @Model)
      {
      <li>
-                @Html.ActionLink(department.Name, "Index", "Employee", new { departmentId = department.id }, null )
+        @Html.ActionLink(department.Name, "Index", "Employee", new { departmentId = department.id }, null )
      </li>
-
      }
 </ul>
 </div>

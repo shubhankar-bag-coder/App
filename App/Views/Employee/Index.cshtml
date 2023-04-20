@@ -9,13 +9,14 @@
 <h2>Employee List</h2>
 <div style="font-family:Arial">
     <ul>
-        @foreach(Employee employee in @Model)
-            {
+        @foreach (Employee employee in @Model)
+        {
             <li>
-                @Html.ActionLink(employee.name, "Details", new { @id= employee.EmployeeID})
+                @Html.ActionLink(employee.name, "Details", new { @id = employee.EmployeeID })
             </li>
-
-            }
+        }
     </ul>
+
+    @*  <p>@Html.ActionLink("back to Department List", new { id=Department.Index})</p> *@
 
 </div>
