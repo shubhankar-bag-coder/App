@@ -1,0 +1,50 @@
+﻿@model BusinessLayer.EmployeeBusinessLayer
+
+@{
+    ViewBag.Title = "Create page";
+}
+
+<div style="font-family:Arial">
+
+
+    <h2>Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+
+                    <div class="editor-label">
+                        <label for="Name">Name</label>
+                    </div>
+
+                    <div class="editor-field">
+                        <input type="text" for="Name_text">
+                    </div>
+
+                    
+                    <div class="editor-field">
+                        <label for="cars">Choose a gender:</label>
+                        <select id="cars" name="cars">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+
+                        </select>
+                    </div>
+
+
+                    <input type="submit" value="Create Employee" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Mobview")
+    </div>
+</div>

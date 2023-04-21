@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using App.Models;
+using BusinessLayer;
 
 namespace App.Controllers
 {
     public class EmployeeController : Controller
     {
-        public ActionResult Index(int departmentId)
+        public ActionResult MobView()
         {
-            EmployeeContext employeeContext = new EmployeeContext();
-            List <Employee> employees = employeeContext.Employees.Where(emp=> emp.DepartmentID== departmentId).ToList(); 
+
+            EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer(); // making a object
+            
+            List<Employee>employees =employeeBusinessLayer.Employees.ToList(); // List<list_name> :> This lines means a data types for list, IEnumerable> Returns a list of specific items || returns a list of 
+
             return View(employees);
         }
 
-        public ActionResult Details(int id)
+        [HttpGet]
+        public ActionResult Create()
         {
-            EmployeeContext employeeContext = new EmployeeContext();
-            Employee emps = employeeContext.Employees.Single(emp => emp.EmployeeID == id); // logic
-            return View(emps);
+           
+            return View();
         }
     }
 }
