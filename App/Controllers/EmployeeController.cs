@@ -25,5 +25,18 @@ namespace App.Controllers
            
             return View();
         }
+         [HttpPost]
+        public ActionResult Create(FormCollection formcollection)
+        {
+        Employee employee= new employee();
+        employee.name=formcollection["Name"];
+        employee.gender=formcollection["Gender"];
+        employee.city=formcollection["City"];
+        employee.dob=formcollection["DateofBirth"];
+           
+            return View();
+        }
+        
+        
     }
 }
