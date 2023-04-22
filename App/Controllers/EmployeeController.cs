@@ -32,7 +32,7 @@ namespace App.Controllers
         employee.name=formcollection["Name"];
         employee.gender=formcollection["Gender"];
         employee.city=formcollection["City"];
-        employee.dob=formcollection["DateofBirth"];
+        employee.dob=Convert.ToDateTime(formcollection["DateofBirth"]);
            
             return View();
         }
