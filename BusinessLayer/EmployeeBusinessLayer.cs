@@ -12,7 +12,7 @@ namespace BusinessLayer
         {
             get
             {
-                // getting data from Web.confog file, reading a connection string and 
+                // getting data from Web.config file, reading a connection string from Web.config file 
                 string connectionString = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
 
                 // Listing (Reading ) from DB
