@@ -18,7 +18,7 @@ namespace BusinessLayer
                 // Listing (Reading ) from DB
                 List<Employee> employees = new List<Employee>();
 
-                // Sql Connection Object
+                // Sql Connection Object, Reading from web.config file
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     SqlCommand cmd = new SqlCommand("spgetAllEmployees", con); // Stored Procedure
