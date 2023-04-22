@@ -33,8 +33,12 @@ namespace App.Controllers
         employee.gender=formcollection["Gender"];
         employee.city=formcollection["City"];
         employee.dob=Convert.ToDateTime(formcollection["DateofBirth"]);
+        
+        // Creating a Business Layer
+        EmployeeBusinesslayer employeebusinesslayer= new EmployeeBusinesslayer();
+        employeebusinesslayer.AddEmployee(employee);
            
-            return View();
+            return RedirectToaction("Index");
         }
         
         
