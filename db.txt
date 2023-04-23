@@ -1,0 +1,43 @@
+--CREATE TABLE Students(
+--[Student_ID] int ,
+--[Student_Name] nvarchar(100),
+--[Home_City] nvarchar(100),
+--[Gender] nvarchar(10),
+--[Department_Name] nvarchar(100),
+--[Courses_Enrolled] nvarchar(50),
+--);
+
+
+--- ALTER TABLE [dbo].[Students] ALTER COLUMN [Courses_Enrolled] NVARCHAR (100) NULL;
+
+--CREATE TABLE [dbo].[Professors] (
+--    [Id]                     INT            NOT NULL,
+--    [Name]                   NVARCHAR (50)  NULL,
+--    [Department]             NVARCHAR (50)  NULL,
+--    [List of Taught Courses] NVARCHAR (100) NULL,
+    
+--);
+
+
+--INSERT INTO [dbo].[Professors] ([Id], [Name], [Department], [List of Taught Courses]) VALUES (1, N'Gopal', N'Msc IT', N'C#, SQL, Asp. Net')
+--INSERT INTO [dbo].[Professors] ([Id], [Name], [Department], [List of Taught Courses]) VALUES (2, N'Nikhil', N'UDIT', N'Data Science, Big Data, AI, RPA')
+--INSERT INTO [dbo].[Professors] ([Id], [Name], [Department], [List of Taught Courses]) VALUES (3, N'Jayesh', N'UDIT', N'Cloud Computing')
+--INSERT INTO [dbo].[Professors] ([Id], [Name], [Department], [List of Taught Courses]) VALUES (4, N'Shradhha', N'Managment', N'Business Communication, Business Economics, Strategic Managment')
+
+
+
+--INSERT INTO [dbo].[Students] ([Student_ID], [Student_Name], [Home_City], [Gender], [Department_Name], [Courses_Enrolled]) VALUES (1, N'Shubhankar', N'Mumbai', N'M', N'Msc IT', N'Blockchain, Cloud-Computing')
+--INSERT INTO [dbo].[Students] ([Student_ID], [Student_Name], [Home_City], [Gender], [Department_Name], [Courses_Enrolled]) VALUES (2, N'Sarang', N'Navi Mumbai', N'M', N'Advanced Computing', N'C#,Java Spring Boot, ASP. Net')
+--INSERT INTO [dbo].[Students] ([Student_ID], [Student_Name], [Home_City], [Gender], [Department_Name], [Courses_Enrolled]) VALUES (3, N'Aakash', N'Navi Mumbai', N'M', N'Advanced Computing', NULL)
+
+
+CREATE TABLE [dbo].[Taught_Courses]
+(
+	[Course_ID] INT,
+	[Course Name] NVARCHAR(50)
+);
+
+
+--INSERT INTO [dbo].[Taught_Courses] ([Course_ID], [Course Name]) VALUES (1, N'C#')
+--INSERT INTO [dbo].[Taught_Courses] ([Course_ID], [Course Name]) VALUES (2, N'Blockchain')
+--INSERT INTO [dbo].[Taught_Courses] ([Course_ID], [Course Name]) VALUES (3, N'Cloud Computing')
